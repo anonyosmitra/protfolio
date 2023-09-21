@@ -1,0 +1,169 @@
+/* styles.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    overflow: hidden; /* Hide body overflow to prevent double scrolling */
+}
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-image: url('sad.jpg');
+    justify-content: center;
+    background-size: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+
+
+.terminal {
+    max-width: 90%;
+    background-color: #000;
+    border: 4px solid #00ff00;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.8);
+    color: #00ff00;
+    font-family: monospace;
+    font-size: 18px;
+    line-height: 1.6;
+    position: relative;
+    overflow: hidden; /* Hide the terminal body's overflow */
+}
+
+.terminal-toolbar {
+    background-color: #333;
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    padding: 5px 10px; /* Reduce menu bar height */
+}
+
+.button {
+    width: 15px;
+    height: 15px;
+    margin: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.linux {
+    background-color: #79b8dc;
+}
+
+.close {
+    background-color: #ff0000;
+}
+
+.minimize {
+    background-color: #ff9900;
+}
+
+.maximize {
+    background-color: #00ff00;
+}
+
+.terminal-menu {
+    background-color: #333;
+    padding-left: 10px;
+}
+
+.terminal-menu ul {
+    margin-top: 0px;
+    list-style-type: none;
+    padding: 0px;
+    display: flex; /* Display menu items horizontally */
+}
+.terminal-menu li {
+    margin-right: 20px;
+    text-decoration: underline;
+    font-size: 15px;
+}
+.terminal-menu li:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+.terminal-menu a {
+    color: #00ff00;
+    text-decoration: none;
+    transition: color 0.3s;
+    border-bottom: 2px solid transparent; /* Initially no underline */
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-right: 20px;
+}
+
+ul li a {
+    color: #00ff00;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+    color: #79b8dc;
+}
+.terminal-body {
+    padding-left: 20px;
+    padding-top: 0px;
+    height: 100%;
+    overflow-y: hidden; /* Enable vertical scrolling for terminal body */
+    max-height: 100%; /* Adjust the maximum height as needed */
+    border:none;
+}
+.terminal-body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.terminal-body iframe {
+            position: relative;
+            top: 0;
+            left: 0;
+    overflow: hidden;
+            width: 100%;
+            height: 75%;
+            border: 0; /* Remove iframe border */
+        }
+terminal-body iframe::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+/* CSS animations */
+.maximized {
+    width: 100%;
+    height: 100%;
+}
+
+.minimized {
+    height: 0;
+    padding: 0;
+}
+@media screen and (max-width: 768px) {
+    /* Mobile-specific CSS */
+    .terminal {
+        max-width: 90%;
+        font-size: 16px;
+    }
+
+    .terminal-menu ul {
+        flex-direction: column; /* Stack menu items vertically on mobile */
+    }
+
+    .terminal-menu li {
+        margin-right: 0; /* Remove right margin on menu items */
+        margin-bottom: 10px; /* Add some space between menu items */
+    }
+}

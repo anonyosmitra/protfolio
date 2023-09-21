@@ -1,0 +1,17 @@
+body{
+    font-family: monospace;
+    font-size: 18px;
+    line-height: 1.6;
+    height:100%;
+    background-color: #000;
+        color: #00ff00;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+body::-webkit-scrollbar {
+    width: 0.4rem; /* Adjust as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Hide thumb */
+}
