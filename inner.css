@@ -15,3 +15,10 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
     background-color: transparent; /* Hide thumb */
 }
+a{
+ color:#10ba04;
+}
+a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}

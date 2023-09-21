@@ -135,7 +135,7 @@ ul li a:hover {
             left: 0;
     overflow: hidden;
             width: 100%;
-            height: 75%;
+            height: 100%;
             border: 0; /* Remove iframe border */
         }
 terminal-body iframe::-webkit-scrollbar-track {
