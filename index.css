@@ -15,7 +15,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    background-image: url('sad.jpg');
+    background-image: url('sad.png');
     justify-content: center;
     background-size: 300px;
     background-position: center;
@@ -150,6 +150,19 @@ terminal-body iframe::-webkit-scrollbar-track {
 .minimized {
     height: 0;
     padding: 0;
+}
+.footer{
+    color: #00ff00;
+    font-family: monospace;
+    font-size: 18px;
+    line-height: 1.6;
+    position: absolute;
+    bottom: 0;
+    flex: 1;
+    width: 90%;
+    text-align: center;
+    border-bottom:4px solid #00ff00;
+    box-shadow: 0px 3px 6px  rgba(0, 255, 0, 0.4);
 }
 @media screen and (max-width: 768px) {
     /* Mobile-specific CSS */
