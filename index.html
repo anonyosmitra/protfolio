@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <script>
-            function closeWindow(){
-            document.getElementById('window').remove();
-            document.body.innerHTML="<div class='sad'/>"+document.body.innerHTML;
+
+    function closeWindow(){
+        document.getElementById('window').remove();
+        document.body.innerHTML="<div class='sad'/>"+document.body.innerHTML;
         }
+
 </script>
 <body>
     <div id="window" class="terminal" style="width: 1000px; height: 600px;">
@@ -33,8 +35,10 @@
         </div>
     </div>
     <br>
-    <div class="footer">
-        <p>&copy; 2023 Anonyo Mitra </p>
+    <div class="footerContainer">
+         <div class="footer">
+            <p>&copy; 2023 Anonyo Mitra </p>
+        </div>
     </div>
        <script>
         // JavaScript to make the window moveable
