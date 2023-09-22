@@ -15,15 +15,23 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('wallpaper.jpg');
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+.sad{
+    width: 100vw;
+    height: 100vh;
     background-image: url('sad.png');
     justify-content: center;
     background-size: 300px;
     background-position: center;
     background-repeat: no-repeat;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
 }
 
 
@@ -38,8 +46,10 @@ body {
     font-family: monospace;
     font-size: 18px;
     line-height: 1.6;
-    position: relative;
+    /*position: relative;*/
     overflow: hidden; /* Hide the terminal body's overflow */
+    position: absolute;
+    cursor: grab;
 }
 
 .terminal-toolbar {

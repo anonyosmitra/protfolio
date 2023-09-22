@@ -7,10 +7,16 @@
     <title>Anonyo | Portfolio</title>
     <link rel="stylesheet" href="index.css">
 </head>
+<script>
+            function closeWindow(){
+            document.getElementById('window').remove();
+            document.body.innerHTML="<div class='sad'/>"+document.body.innerHTML;
+        }
+</script>
 <body>
-    <div id="window" class="terminal" style="width: 1000px;height: 600px;">
+    <div id="window" class="terminal" style="width: 1000px; height: 600px;">
         <div class="terminal-toolbar">
-            <div class="button close" onclick="document.getElementById('window').remove();"></div>
+            <div class="button close" onclick="closeWindow()"></div>
             <div class="button minimize" onclick="document.getElementById('window').style='width: 800px;height: 500px;'"></div>
             <div class="button maximize"onclick="document.getElementById('window').style='width: 1400px;height: 800px;'"></div>
         </div>
@@ -30,6 +36,32 @@
     <div class="footer">
         <p>&copy; 2023 Anonyo Mitra </p>
     </div>
+       <script>
+        // JavaScript to make the window moveable
+        const windowElement = document.getElementById('window');
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        windowElement.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offsetX = e.clientX - windowElement.getBoundingClientRect().left;
+            offsetY = e.clientY - windowElement.getBoundingClientRect().top;
+            windowElement.style.cursor = 'grabbing'; // Change cursor style when dragging
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const x = e.clientX - offsetX;
+            const y = e.clientY - offsetY;
+            windowElement.style.left = `${x}px`;
+            windowElement.style.top = `${y}px`;
+        });
+
+        window.addEventListener('mouseup', () => {
+            isDragging = false;
+            windowElement.style.cursor = 'grab';
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
