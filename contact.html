@@ -1,21 +1,73 @@
-<link rel="stylesheet" href="inner.css">
-<link rel="stylesheet" href="contact.css">
-<script src="pointerAnimation.js"></script>
-<body onload="startPointerAnimation()">
-<h3>$contact</h3>
-<p>[<a href="https://github.com/anonyosmitra" target="_blank">Github</a>]|[<a href="https://www.linkedin.com/in/anonyo-shanker-mitra-77466b19a/" target="_blank">LinkedIn</a>]|[<a href="mailto:anonyos.mitra@gmail.com">Email</a>]<br></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonyo | Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<script>
 
-    <ul class="custom-list">#Phone:
-<li>US: <a href="tel:+13602092042">+1 360 209 2042</a></li>
-<li>PL: <a href="tel:+48692425069">+48 692 425 069</a></li>
-    </ul>
-<p>
-    [<a href="CV-AnonyoMitra.pdf" download="CV-AnonyoMitra.pdf" >Download CV(English)</a>]|[<a href="CV-AnonyoMitra-PL.pdf" download="CV-AnonyoMitra-PL.pdf" >Download CV(Polish)</a>]<br>
-    [<a href="CV-AnonyoMitra-ATS.pdf" download="CV-AnonyoMitra-ATS.pdf" >Download CV(ATS friendly version)</a>]<snap id="pointAnime"></snap>
-</p>
-<br>
-            <br>
-            <br>
-            <br>
-            <br>
+    function closeWindow(){
+        document.getElementById('window').remove();
+        document.body.innerHTML="<div class='sad'/>"+document.body.innerHTML;
+        }
+
+
+</script>
+<body>
+    <div id="window" class="terminal" style="width: 1000px; height: 600px;">
+        <div class="terminal-toolbar">
+            <div class="button close" onclick="closeWindow()"></div>
+            <div class="button minimize" onclick="document.getElementById('window').style='width: 800px;height: 500px;'"></div>
+            <div class="button maximize"onclick="document.getElementById('window').style='width: 1400px;height: 800px;'"></div>
+        </div>
+        <div class="terminal-menu">
+            <ul>
+                <li onclick="document.getElementById('page').src='home-tab.html'">About Me</li>
+                <li onclick="document.getElementById('page').src='projects-tab.html'">My Projects</li>
+                <li onclick="document.getElementById('page').src='contact-tab.html'">Contact Me</li>
+            </ul>
+        </div>
+        <div class="terminal-body">
+            <iframe id="page" src="contact-tab.html"></iframe>
+
+        </div>
+    </div>
+    <br>
+    <div class="footerContainer">
+         <div class="footer">
+            <p>&copy; 2023 Anonyo Mitra </p>
+        </div>
+    </div>
+       <script>
+        // JavaScript to make the window moveable
+        const windowElement = document.getElementById('window');
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        windowElement.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offsetX = e.clientX - windowElement.getBoundingClientRect().left;
+            offsetY = e.clientY - windowElement.getBoundingClientRect().top;
+            windowElement.style.cursor = 'grabbing'; // Change cursor style when dragging
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const x = e.clientX - offsetX;
+            const y = e.clientY - offsetY;
+            windowElement.style.left = `${x}px`;
+            windowElement.style.top = `${y}px`;
+        });
+
+        window.addEventListener('mouseup', () => {
+            isDragging = false;
+            windowElement.style.cursor = 'grab';
+        });
+    </script>
+
+    <script src="script.js"></script>
 </body>
+</html>
